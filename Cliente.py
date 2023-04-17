@@ -4,9 +4,8 @@ class Cliente:
         self.telefone = telefone
         self.cpf = cpf
 # lista adiciona o cliente no "banco de dados"
-        lista.append(nome)
-        lista.append(telefone)
-        lista.append(cpf)
-
-
-
+        dicionario_clientes = {}
+        dicionario_clientes['Nome'] = f'{self.nome}'
+        dicionario_clientes['Telefone'] = f'{self.telefone}'
+        dicionario_clientes['CPF'] = f'{self.cpf}'
+        lista.append(dicionario_clientes)

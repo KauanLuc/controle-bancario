@@ -4,11 +4,13 @@ class Conta:
         self.__id = id
         self.__saldo = saldo
 # lista adiciona a conta no "banco de dados"
-        lista.append(titular)
-        lista.append(id)
+        dicionario_conta = {}
+        dicionario_conta['Titular'] = f'{self.__titular}'
+        dicionario_conta['ID Cliente'] = f'{self.__id}'
+        lista.append(dicionario_conta)
 
     def _dados(self):
-        print('-=-' * 8)
+        print('-=-'*8)
         print(f'DADOS DA CONTA BBK\nTitular: {self.__titular}\nID Cliente: {self.__id}\nSaldo: R${self.__saldo}')
         print('-=-'*8)
     def _saque(self, valor):
@@ -28,6 +30,3 @@ class Conta:
         else:
             self.__saldo += self.deposito
             print(f'Depósito de R${self.deposito} efetuado com sucesso.')
-
-
-
